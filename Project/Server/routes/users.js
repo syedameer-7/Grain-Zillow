@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
 const auth = require('../middleware/auth');
-const authorize = require('../middleware/roles');
+const { authorize } = require('../middleware/roles');
 
 /**
  * User Management Routes
