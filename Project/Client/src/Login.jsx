@@ -112,18 +112,23 @@ export default function GrainZillowLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
     if (!userId || !password) {
       alert("Please enter both user id and password");
       return;
     }
+  
     if (!captchaValid) {
       alert("Captcha is not valid. Please try again.");
       return;
     }
+  
     setAuthenticating(true);
+  
     setTimeout(() => {
       alert("Login successful! Redirecting to Grain Storage Dashboard...");
       setAuthenticating(false);
+      navigate("/");   // <-- this was missing
     }, 1500);
   };
 
