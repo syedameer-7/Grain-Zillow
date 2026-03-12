@@ -128,7 +128,7 @@ export default function GrainZillowLogin() {
     setTimeout(() => {
       alert("Login successful! Redirecting to Grain Storage Dashboard...");
       setAuthenticating(false);
-      navigate("/");   // <-- this was missing
+      navigate("/dashboard");   // <-- this was missing
     }, 1500);
   };
 
