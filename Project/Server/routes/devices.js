@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const deviceController = require('../controllers/deviceController');
 const auth = require('../middleware/auth');
-const authorize = require('../middleware/roles');
+const { authorize } = require('../middleware/roles');
 const { validateDeviceRegistration } = require('../middleware/validation');
 
 /**

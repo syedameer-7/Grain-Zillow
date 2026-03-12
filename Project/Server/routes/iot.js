@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const iotController = require('../controllers/iotController');
 const auth = require('../middleware/auth');
-const authorize = require('../middleware/roles');
+const { authorize } = require('../middleware/roles');
 const { validateDeviceControl } = require('../middleware/validation');
 
 /**

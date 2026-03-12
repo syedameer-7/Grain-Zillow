@@ -3,8 +3,7 @@ const router = express.Router();
 const dataController = require('../controllers/dataController');
 const { validateSensorData } = require('../middleware/validation');
 const auth = require('../middleware/auth');
-const authorize = require('../middleware/roles');
-
+const { authorize } = require('../middleware/roles');
 /**
  * Data Routes
  * Handles sensor data ingestion and retrieval

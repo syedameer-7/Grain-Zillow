@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const storageController = require('../controllers/storageController');
 const auth = require('../middleware/auth');
-const authorize = require('../middleware/roles');
+const { authorize } = require('../middleware/roles');
 const { validateStorageRequest } = require('../middleware/validation');
 
 /**
