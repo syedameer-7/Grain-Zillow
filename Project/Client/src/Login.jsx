@@ -126,9 +126,18 @@ export default function GrainZillowLogin() {
     setAuthenticating(true);
   
     setTimeout(() => {
-      alert("Login successful! Redirecting to Grain Storage Dashboard...");
+      alert("Login successful!");
+  
+      // 🔥 TEMP ROLE-BASED REDIRECT
+      if (userId === "admin") {
+        navigate("/admin");
+      } else if (userId === "manager1") {
+        navigate("/manager");
+      } else {
+        navigate("/user");
+      }
+  
       setAuthenticating(false);
-      navigate("/dashboard");   // <-- this was missing
     }, 1500);
   };
 

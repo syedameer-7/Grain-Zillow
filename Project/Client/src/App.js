@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./Dashboard";
 import Home from "./Home";
 import LearnMore from "./LearnMore";
 import ProblemSection from "./ProblemSection";
@@ -13,13 +12,15 @@ import PrivacyPolicy from "./Policy";
 import ForgotPasswordRequest from "./ForgotPasswordReques";
 import ForgotPasswordVerify from "./ForgotPasswordVerify";
 import ForgotPasswordReset from "./ForgotPasswordReset";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import ManagerDashboard from "./pages/manager/ManagerDashboard";
+import UserDashboard from "./pages/user/UserDashboard";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-	<Route path="/dashboard" element={<Dashboard />} />
         <Route path="/learn-more" element={<LearnMore />} />
         <Route path="/about" element={<AboutSection />} />
         <Route path="/problem" element={<ProblemSection />} />
@@ -31,6 +32,9 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPasswordRequest />} />
         <Route path="/forgot-password/verify" element={<ForgotPasswordVerify />} />
         <Route path="/forgot-password/reset" element={<ForgotPasswordReset />} />
+	<Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/manager" element={<ManagerDashboard />} />
+	<Route path="/user" element={<UserDashboard />} />
       </Routes>
     </Router>
   );
