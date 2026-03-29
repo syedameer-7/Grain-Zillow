@@ -35,7 +35,7 @@ import Manager_FAQ from "./Manager_FAQ";
 import ContactUs from "./ManagerContactus";
 
 
-import EmployeeDashboard from "./EmployeeDashboard";
+import EmployeeDashboard from "./EmployeeDasboard";
 import MyTasksEmp from "./MyTasksEmp";
 import EmployeeMessages from "./MessageSecEmp";
 import WorkHistory from "./WorkHisEmp";
