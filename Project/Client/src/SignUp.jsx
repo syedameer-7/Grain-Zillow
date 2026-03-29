@@ -183,7 +183,7 @@ export default function Signup() {
             <div className="secondary-text">
               <p>
                 Already have an account?{" "}
-                <Link to="/" className="secondary-link">Sign in here</Link>
+                <Link to="/login" className="secondary-link">Sign in here</Link>
               </p>
             </div>
           </div>

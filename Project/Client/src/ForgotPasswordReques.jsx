@@ -124,7 +124,7 @@ export default function ForgotPasswordRequest() {
 
           <div className="secondary-text">
             <p>
-              Remember your password? <Link to="/">Back to Login</Link>
+              Remember your password? <Link to="/login">Back to Login</Link>
             </p>
             <p>
               Need help? <Link to="/contactus">Contact Support</Link>

@@ -124,21 +124,24 @@ export default function GrainZillowLogin() {
     }
   
     setAuthenticating(true);
-  
     setTimeout(() => {
-      alert("Login successful!");
-  
-      // 🔥 TEMP ROLE-BASED REDIRECT
-      if (userId === "admin") {
-        navigate("/admin");
-      } else if (userId === "manager1") {
-        navigate("/manager");
-      } else {
-        navigate("/user");
-      }
-  
-      setAuthenticating(false);
-    }, 1500);
+  const cleanUserId = userId.trim().toLowerCase();
+
+  alert("User entered: " + cleanUserId);
+
+  if (cleanUserId === "admin@grainzillow.com") {
+    navigate("/admin");
+  } else if (
+    cleanUserId === "manager1@grainzillow.com" ||
+    cleanUserId === "manager2@grainzillow.com"
+  ) {
+    navigate("/manager");
+  } else {
+    navigate("/employee");
+  }
+
+  setAuthenticating(false);
+}, 1000);
   };
 
   return (
