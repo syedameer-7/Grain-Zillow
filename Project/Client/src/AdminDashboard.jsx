@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const sidebarLinks = [
-  { to: "/admin", text: "Dashboard", icon: "fa-home" },
+  { to: "/admin-dashboard", text: "Dashboard", icon: "fa-home" },
   { to: "/silo-list", text: "Silo List", icon: "fa-list" },
   { to: "/silo-management", text: "Silo Management", icon: "fa-warehouse" },
   { to: "/grains-inventory", text: "Grains Inventory", icon: "fa-seedling" },
